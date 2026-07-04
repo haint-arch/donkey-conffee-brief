@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title.home">Donkey Coffee Roastery — Specialty coffee for those on the move</title>
+  <meta name="description" data-i18n-content="desc.home" content="Donkey Coffee Roastery — a small specialty coffee roastery by the Red River, Hanoi. Small-batch, honest, for nature lovers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/logo-donkey.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="is-splash">
+
+  <!-- ===== Intro (stamp slam — quick, once per session) ===== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <div class="intro__mark-wrap">
+        <span class="intro__ring r1"></span>
+        <span class="intro__ring r2"></span>
+        <span class="intro__ring r3"></span>
+        <img class="intro__mark" src="assets/logo-donkey.png" alt="" />
+      </div>
+      <p class="intro__word">Donkey Coffee Roastery</p>
+      <div class="intro__bar"><span></span></div>
+    </div>
+  </div>
+
+  <main class="home">
+    <!-- ===== Hero: image carousel (coverflow) + slogan ===== -->
+    <section class="home-hero">
+      <img class="home-hero__logo hero-fade" style="--d:0.05s" src="assets/logo-full.png" alt="Donkey Coffee Roastery" />
+      <div class="carousel hero-fade" id="home-carousel" style="--d:0.16s" data-i18n-aria="home.carouselAria" aria-label="Donkey space photos">
+        <div class="carousel__stage">
+          <figure class="carousel__slide"><img src="assets/cafe-roasting.png" alt="Rang cà phê mẻ nhỏ trên máy rang tại Donkey" /></figure>
+          <figure class="carousel__slide"><img src="assets/cafe-pourover.png" alt="Barista pha pour-over tại Donkey Coffee Roastery" /></figure>
+          <figure class="carousel__slide"><img src="assets/cafe-interior.png" alt="Không gian trong quán Donkey với quầy bar gỗ và máy rang" /></figure>
+          <figure class="carousel__slide"><img src="assets/cafe-outdoor.png" alt="Bàn ghế ngoài trời dưới tán cây lớn ven sông Hồng" /></figure>
+          <figure class="carousel__slide"><img src="assets/cafe-vinyl.png" alt="Kệ đĩa than và loa trong không gian Donkey" /></figure>
+        </div>
+      </div>
+      <p class="home-hero__slogan hero-fade" style="--d:0.28s" id="slogan-tw">
+        In coffee we <span class="tw-icon" aria-hidden="true"></span><span class="tw-text">love</span><span class="tw-cursor" aria-hidden="true">|</span>
+      </p>
+    </section>
+
+    <!-- ===== 4-cell navigation strip ===== -->
+    <nav class="home-nav" data-i18n-aria="home.navAria" aria-label="Main navigation">
+      <div class="home-nav__cell">
+        <a class="home-nav__title" href="collection.html" data-i18n="home.shop">Shop</a>
+        <ul class="home-nav__subs">
+          <li><a href="collection.html" data-i18n="home.sub.beans">Donkey Beans</a></li>
+          <li><a href="collection.html" data-i18n="home.sub.selection">Donkey Selection</a></li>
+          <li><a href="#" data-i18n="home.sub.kombucha">Kombucha</a></li>
+          <li><a href="#" data-i18n="home.sub.merch">Merch</a></li>
+        </ul>
+      </div>
+      <div class="home-nav__cell">
+        <a class="home-nav__title" href="about.html" data-i18n="home.story">Story</a>
+        <ul class="home-nav__subs">
+          <li><a href="about.html" data-i18n="home.sub.aboutDonkey">About Donkey</a></li>
+          <li><a href="about.html" data-i18n="home.sub.journey">Our Journey</a></li>
+          <li><a href="field-notes.html" data-i18n="home.sub.notes">Field Notes</a></li>
+        </ul>
+      </div>
+      <div class="home-nav__cell">
+        <a class="home-nav__title" href="#" data-i18n="home.event">Event</a>
+        <ul class="home-nav__subs">
+          <li><a href="#" data-i18n="home.sub.cupping">Cupping &amp; Workshop</a></li>
+          <li><a href="#" data-i18n="home.sub.camping">River Camping</a></li>
+          <li><a href="#" data-i18n="home.sub.popup">Pop-up Market</a></li>
+        </ul>
+      </div>
+      <div class="home-nav__cell">
+        <a class="home-nav__title" href="#" data-i18n="home.more">More</a>
+        <ul class="home-nav__subs">
+          <li><a href="about.html#visit" data-i18n="home.sub.visit">Visit Us</a></li>
+          <li><a href="#" data-i18n="home.sub.wholesale">Wholesale</a></li>
+          <li><a href="#" data-i18n="home.sub.contact">Contact</a></li>
+          <li><a href="https://www.instagram.com/donkey.coffee.roastery/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </nav>
+  </main>
+
+  <!-- ===== Basic footer ===== -->
+  <footer class="home-footer">
+    <div class="home-footer__inner">
+      <div class="home-footer__brand">
+        <img class="home-footer__logo" src="assets/logo-full.png" alt="Donkey Coffee Roastery" />
+        <p class="home-footer__desc" data-i18n="homeFooter.desc">A small specialty coffee roastery by the Red River, Hanoi. Roasted in small batches — for the road.</p>
+        <p class="home-footer__copy">© 2019–2026 Donkey Coffee Roastery</p>
+      </div>
+      <nav class="home-footer__links" data-i18n-aria="home.footerAria" aria-label="Footer links">
+        <ul>
+          <li><a href="collection.html" data-i18n="homeFooter.shop">Shop</a></li>
+          <li><a href="about.html" data-i18n="homeFooter.story">Story</a></li>
+          <li><a href="field-notes.html" data-i18n="homeFooter.notes">Field Notes</a></li>
+        </ul>
+        <ul>
+          <li><a href="about.html#visit" data-i18n="homeFooter.visit">Visit</a></li>
+          <li><a href="https://www.instagram.com/donkey.coffee.roastery/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://web.facebook.com/profile.php?id=61556406970426" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/notes.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

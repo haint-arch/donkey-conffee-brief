@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title.collection">Specialty coffee — Donkey Coffee Roastery</title>
+  <meta name="description" data-i18n-content="desc.collection" content="A collection of small-batch specialty coffee from Donkey Coffee Roastery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/logo-donkey.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Donkey Coffee Roastery"><img class="brand__logo" src="assets/logo-donkey.png" alt="" /><span class="brand__name">Donkey Coffee Roastery</span></a>
+      <nav class="nav">
+        <a href="collection.html" class="active" data-i18n="nav.coffee">Coffee</a>
+        <a href="about.html" data-i18n="nav.story">Story</a>
+        <a href="field-notes.html" data-i18n="nav.notes">Field Notes</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn desktop-only" data-i18n-aria="nav.search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" id="cart-btn" data-i18n-aria="nav.cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" data-i18n-aria="nav.openMenu" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav__top">
+      <span class="brand"><img class="brand__logo" src="assets/logo-donkey.png" alt="" /><span class="brand__name">Donkey Coffee Roastery</span></span>
+      <button class="icon-btn" id="nav-close" data-i18n-aria="nav.closeMenu" aria-label="Close menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <a href="collection.html" data-i18n="nav.coffee">Coffee</a>
+    <a href="about.html" data-i18n="nav.story">Story</a>
+    <a href="field-notes.html" data-i18n="nav.notes">Field Notes</a>
+  </div>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="index.html" data-i18n="common.home">Home</a> / <span data-i18n="col.crumb">Specialty coffee</span></nav>
+
+    <div class="page-head">
+      <p class="eyebrow reveal" data-i18n="col.eyebrow">Collection</p>
+      <h1 class="reveal" data-i18n="col.h1">Specialty coffee</h1>
+      <p class="lead reveal" style="margin-top:1rem" data-i18n="col.lead">Single origins from three continents, roasted in small batches. Each lot tells a story of its land and the people behind the bean.</p>
+    </div>
+
+    <div class="toolbar reveal">
+      <div class="filters" id="filters">
+        <button class="chip is-active" data-filter="all" data-i18n="col.all">All</button>
+        <button class="chip" data-filter="Ethiopia">Ethiopia</button>
+        <button class="chip" data-filter="Colombia">Colombia</button>
+        <button class="chip" data-filter="Việt Nam" data-i18n="country.vietnam">Vietnam</button>
+      </div>
+      <select class="select" id="sort" data-i18n-aria="col.sortAria" aria-label="Sort">
+        <option value="featured" data-i18n="col.sortFeatured">Featured</option>
+        <option value="price-asc" data-i18n="col.sortPriceAsc">Price: low to high</option>
+        <option value="price-desc" data-i18n="col.sortPriceDesc">Price: high to low</option>
+      </select>
+    </div>
+
+    <section style="padding-bottom:var(--sp-7)">
+      <div class="product-grid" id="grid"></div>
+      <p class="muted" id="empty-msg" style="display:none; padding:2rem 0" data-i18n="col.empty">No products match this filter.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Donkey Coffee Roastery"><img class="brand__logo brand__logo--mark" src="assets/logo-full.png" alt="Donkey Coffee Roastery" /></a>
+          <p class="muted" style="max-width:34ch; margin-top:1rem">Cà phê đặc sản & tinh thần outdoor. Rang cho những cung đường.</p>
+        </div>
+        <div><h4>Mua sắm</h4><ul><li><a href="collection.html">Cà phê hạt</a></li><li><a href="collection.html">Single origin</a></li><li><a href="collection.html">Gift set</a></li></ul></div>
+        <div><h4>Donkey</h4><ul><li><a href="about.html">Câu chuyện</a></li><li><a href="field-notes.html">Field Notes</a></li><li><a href="about.html#visit">Ghé quán</a></li></ul></div>
+        <div><h4>Theo dõi</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">TikTok</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Donkey Coffee Roastery. Made on the move.</span><span>Chính sách · Bảo mật · Vận chuyển</span></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

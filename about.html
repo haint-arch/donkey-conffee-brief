@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title.about">Story — Donkey Coffee Roastery</title>
+  <meta name="description" data-i18n-content="desc.about" content="Donkey Coffee Roastery — a roastery in the city, raw and honest. Our story, space and people." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/logo-donkey.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Donkey Coffee Roastery"><img class="brand__logo" src="assets/logo-donkey.png" alt="" /><span class="brand__name">Donkey Coffee Roastery</span></a>
+      <nav class="nav">
+        <a href="collection.html" data-i18n="nav.coffee">Coffee</a>
+        <a href="about.html" class="active" data-i18n="nav.story">Story</a>
+        <a href="field-notes.html" data-i18n="nav.notes">Field Notes</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn desktop-only" data-i18n-aria="nav.search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" id="cart-btn" data-i18n-aria="nav.cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" data-i18n-aria="nav.openMenu" aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav__top">
+      <span class="brand"><img class="brand__logo" src="assets/logo-donkey.png" alt="" /><span class="brand__name">Donkey Coffee Roastery</span></span>
+      <button class="icon-btn" id="nav-close" data-i18n-aria="nav.closeMenu" aria-label="Close menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <a href="collection.html" data-i18n="nav.coffee">Coffee</a>
+    <a href="about.html" data-i18n="nav.story">Story</a>
+    <a href="field-notes.html" data-i18n="nav.notes">Field Notes</a>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" style="min-height:70svh">
+      <div class="hero__media"><img src="assets/roast-machine.png" alt="Lò rang Donkey Coffee Roastery" /></div>
+      <div class="container hero__inner">
+        <p class="eyebrow reveal" data-i18n="about.eyebrow">Story</p>
+        <h1 class="display reveal" style="max-width:16ch" data-i18n="about.h1">A roastery in the city.</h1>
+        <p class="lead reveal" data-i18n="about.lead">Raw, dusty, and honest. Donkey doesn't chase glamour — we just make decent coffee.</p>
+      </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="section--tight section">
+      <div class="container container--narrow" style="text-align:center">
+        <p class="eyebrow reveal" data-i18n="about.manifestoEyebrow">Manifesto</p>
+        <h2 class="reveal" style="font-size:clamp(1.8rem,4vw,3rem); margin-top:0.75rem" data-i18n="about.manifestoTitle">Good coffee needn't be complicated. Just honest.</h2>
+        <p class="lead reveal" style="margin:1.5rem auto 0" data-i18n="about.manifestoBody">The name Donkey is a nod to the stamina and free spirit of people who love to roam. We roast in small batches, hand-pick every single-origin lot, and tell the story of the farmer behind each cup.</p>
+      </div>
+    </section>
+
+    <!-- Editorial 1 -->
+    <section class="section">
+      <div class="container">
+        <div class="editorial">
+          <div class="editorial__media reveal"><span class="editorial__tag" data-i18n="about.spaceTag">Space</span><img src="assets/product-shelf.png" alt="Donkey coffee product shelf on OSB wall" /></div>
+          <div class="editorial__body reveal">
+            <p class="eyebrow" data-i18n="about.spaceTag">Space</p>
+            <h2 data-i18n="about.spaceTitle">Raw, unadorned.</h2>
+            <p class="lead" data-i18n="about.spaceBody">Exposed metal ducting, rough timber walls, warm workshop lights. We keep the raw 'workshop' feel so you can watch each batch roasted right in front of you — transparent from green bean to cup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial 2 reverse -->
+    <section class="section">
+      <div class="container">
+        <div class="editorial editorial--reverse">
+          <div class="editorial__media reveal"><span class="editorial__tag" data-i18n="about.peopleTag">People</span><img src="assets/cafe-chess.png" alt="Guests playing chess over coffee at Donkey" /></div>
+          <div class="editorial__body reveal">
+            <p class="eyebrow" data-i18n="about.peopleTag">People</p>
+            <h2 data-i18n="about.peopleTitle">Barista and guest face the same way.</h2>
+            <p class="lead" data-i18n="about.peopleBody">At Donkey, the counter isn't a wall between us. The barista weighs beans while telling you about the latest Gesha lot; regulars chime in on extraction. Everyone faces the same thing: flavor.</p>
+            <div class="values" style="margin-top:2rem">
+              <div class="value"><span class="value__num">5</span><h3 data-i18n="about.statOrigin">Single origin</h3><p data-i18n="about.statOriginSub">Sourced from 3 continents.</p></div>
+              <div class="value"><span class="value__num">48h</span><h3 data-i18n="about.statRoast">Roast & ship</h3><p data-i18n="about.statRoastSub">Fresh from roaster to you.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section" style="background:var(--paper-2)">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow reveal" data-i18n="about.valuesEyebrow">What we believe</p><h2 class="reveal" data-i18n="about.valuesTitle">Three Donkey principles</h2></div></div>
+        <div class="values">
+          <div class="value reveal"><span class="value__num">01</span><h3 data-i18n="about.val1Title">Original</h3><p data-i18n="about.val1Body">No chasing flashy trends. We keep coffee and space raw and honest.</p></div>
+          <div class="value reveal"><span class="value__num">02</span><h3 data-i18n="about.val2Title">Transparent</h3><p data-i18n="about.val2Body">We're open about the origin, producer and process of every lot. You know exactly what you're drinking.</p></div>
+          <div class="value reveal"><span class="value__num">03</span><h3 data-i18n="about.val3Title">Free</h3><p data-i18n="about.val3Body">Coffee for people on the move — brewed in the shop, taken on the road, or beside a campfire.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="section" id="visit">
+      <div class="container">
+        <div class="editorial">
+          <div class="editorial__media reveal"><span class="editorial__tag" data-i18n="home.sub.visit">Visit Us</span><img src="assets/storefront.png" alt="Glass storefront of Donkey Coffee Roastery" /></div>
+          <div class="editorial__body reveal">
+            <p class="eyebrow" data-i18n="home.sub.visit">Visit Us</p>
+            <h2 data-i18n="about.visitTitle">Coffee is waiting for you.</h2>
+            <ul class="spec-list" style="border-top:none; padding-top:0; margin-top:1.5rem">
+              <li><span class="k" data-i18n="about.visitAddress">Address</span><span>37/139 Chương Dương Độ, Hoàn Kiếm, Hà Nội</span></li>
+              <li><span class="k" data-i18n="about.visitHours">Opening hours</span><span data-i18n="about.visitHoursVal">Daily 07:00 – 22:00</span></li>
+              <li><span class="k" data-i18n="about.visitContact">Contact</span><span><a href="tel:+84919993638">091 999 36 38</a></span></li>
+              <li><span class="k">Instagram</span><span><a href="https://www.instagram.com/donkey.coffee.roastery/" target="_blank" rel="noopener">@donkey.coffee.roastery</a></span></li>
+            </ul>
+            <div class="hero__cta" style="margin-top:2rem">
+              <a href="collection.html" class="btn" data-i18n="about.visitBtnShop">Shop coffee online</a>
+              <a href="https://www.google.com/maps/search/?api=1&query=37%2F139%20Ch%C6%B0%C6%A1ng%20D%C6%B0%C6%A1ng%20%C4%90%E1%BB%99%2C%20Ho%C3%A0n%20Ki%E1%BA%BFm%2C%20H%C3%A0%20N%E1%BB%99i" target="_blank" rel="noopener" class="btn btn--ghost" data-i18n="about.visitBtnDir">Directions →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Donkey Coffee Roastery"><img class="brand__logo brand__logo--mark" src="assets/logo-full.png" alt="Donkey Coffee Roastery" /></a>
+          <p class="muted" style="max-width:34ch; margin-top:1rem">Cà phê đặc sản & tinh thần outdoor. Rang cho những cung đường.</p>
+        </div>
+        <div><h4>Mua sắm</h4><ul><li><a href="collection.html">Cà phê hạt</a></li><li><a href="collection.html">Single origin</a></li><li><a href="collection.html">Gift set</a></li></ul></div>
+        <div><h4>Donkey</h4><ul><li><a href="about.html">Câu chuyện</a></li><li><a href="field-notes.html">Field Notes</a></li><li><a href="about.html#visit">Ghé quán</a></li></ul></div>
+        <div><h4>Theo dõi</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">TikTok</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Donkey Coffee Roastery. Made on the move.</span><span>Chính sách · Bảo mật · Vận chuyển</span></div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
