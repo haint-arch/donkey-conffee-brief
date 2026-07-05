@@ -467,9 +467,41 @@ h1, h2, h3, h4 {
     margin-top: clamp(0.9rem, 3vw, 1.3rem);
     gap: 0.55rem;
   }
-  .home-nav__subs a { font-size: 1rem; padding-block: 0.35rem; }
+  .home-nav__subs a {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+    display: inline-block;
+  }
+  .home-nav__subs a:active {
+    background: var(--cement-2);
+    color: var(--navy);
+    transform: scale(0.97);
+  }
+  .home-nav__title {
+    display: inline-block;
+    padding: 0.35rem 0.6rem;
+    border-radius: 8px;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+  }
+  .home-nav__title:active {
+    background: var(--cement-2);
+    color: var(--navy);
+    transform: scale(0.97);
+  }
+  /* Give each sub-item its own row + centered pill target for easier aiming */
+  .home-nav__subs { align-items: center; }
   /* keep the top accent bar visible on mobile too (no hover on touch) */
   .home-nav__cell::before { transform: scaleX(0.35); }
+}
+
+/* Generic press feedback on all interactive elements (mobile-friendly) */
+@media (hover: none) {
+  a:active, button:active {
+    opacity: 0.7;
+    transition: opacity 0.1s ease;
+  }
 }
 
 /* Desktop: fit one viewport when tall enough, scroll gracefully when short */

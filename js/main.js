@@ -3,6 +3,24 @@
   "use strict";
 
   var PRODUCTS = window.DONKEY_PRODUCTS || [];
+
+  /* ---------- Collection page: reflect ?cat=... in the eyebrow ---------- */
+  (function initCatBadge() {
+    var eyebrow = document.querySelector(".page-head .eyebrow");
+    if (!eyebrow) return;
+    var params = new URLSearchParams(window.location.search);
+    var cat = params.get("cat");
+    if (!cat) return;
+    var lang = (window.getLang && window.getLang()) || "en";
+    var LABELS = {
+      beans:     { en: "Donkey Beans",     vi: "Cà phê hạt Donkey" },
+      selection: { en: "Donkey Selection", vi: "Tuyển chọn Donkey" }
+    };
+    var label = LABELS[cat];
+    if (!label) return;
+    eyebrow.textContent = label[lang] || label.en;
+    eyebrow.removeAttribute("data-i18n");
+  })();
   var NOTES = window.DONKEY_NOTES || [];
   var fmt = window.formatVnd || function (n) { return n + "đ"; };
   var t = window.t || function (k) { return k; };
