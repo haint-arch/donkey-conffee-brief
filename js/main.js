@@ -36,8 +36,10 @@
       body.classList.remove("intro-active");
       setTimeout(function () { if (intro.parentNode) intro.parentNode.removeChild(intro); }, 800);
     }
-    var t = setTimeout(leave, 1150);
+    var isMobile = window.matchMedia && window.matchMedia("(max-width: 720px)").matches;
+    var t = setTimeout(leave, isMobile ? 720 : 1150);
     intro.addEventListener("click", function () { clearTimeout(t); leave(); });
+    intro.addEventListener("touchend", function () { clearTimeout(t); leave(); }, { passive: true });
   })();
 
   /* ---------- Scroll progress ---------- */
@@ -972,22 +974,8 @@
 
   /* ---------- Homepage 4-cell nav (touch tap-to-open) ---------- */
   (function initHomeNav() {
-    var nav = document.querySelector(".home-nav");
-    if (!nav) return;
-    var isTouch = window.matchMedia && window.matchMedia("(hover: none)").matches;
-    if (!isTouch) return;
-    var cells = nav.querySelectorAll(".home-nav__cell");
-    cells.forEach(function (cell) {
-      var title = cell.querySelector(".home-nav__title");
-      if (!title) return;
-      title.addEventListener("click", function (e) {
-        if (!cell.classList.contains("is-open")) {
-          e.preventDefault();
-          cells.forEach(function (c) { if (c !== cell) c.classList.remove("is-open"); });
-          cell.classList.add("is-open");
-        }
-      });
-    });
+    /* Mobile now shows all sub-items always visible — no accordion needed.
+       Title and sub links both navigate directly on tap. */
   })();
 
   /* ---------- Back-to-top (floating + footer button) ---------- */

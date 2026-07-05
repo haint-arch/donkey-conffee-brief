@@ -310,7 +310,9 @@
     var lineTotal = (it.unitPrice || 0) * (it.qty || 0);
     return (
       '<li class="co-line">' +
-        '<div class="co-line__media"><img src="' + img + '" alt="' + name + '" /><span class="co-line__qty">' + (it.qty || 0) + '</span></div>' +
+        '<div class="co-line__media"><img src="' + img + '" alt="' + name + '" />' +
+          ((it.qty || 0) > 1 ? '<span class="co-line__qty">' + it.qty + '</span>' : '') +
+        '</div>' +
         '<div class="co-line__info">' +
           '<p class="co-line__name">' + name + '</p>' +
           (meta.length ? '<p class="co-line__meta">' + meta.join(" · ") + '</p>' : "") +
