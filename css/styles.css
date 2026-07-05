@@ -1262,8 +1262,22 @@ h1, h2, h3, h4 {
 }
 
 .spec-list { list-style: none; margin: var(--sp-3) 0 0; padding: var(--sp-3) 0 0; border-top: 1px solid var(--cement-2); }
-.spec-list li { display: flex; justify-content: space-between; padding: 0.55rem 0; font-size: 0.9rem; border-bottom: 1px solid var(--cement); }
-.spec-list .k { color: var(--ink-3); letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.74rem; }
+.spec-list li {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 1.2rem;
+  padding: 0.7rem 0; font-size: 0.9rem;
+  border-bottom: 1px solid var(--cement);
+}
+.spec-list li > span:last-child {
+  text-align: right;
+  max-width: 65%;
+  line-height: 1.5;
+}
+.spec-list .k {
+  color: var(--ink-3); letter-spacing: 0.08em;
+  text-transform: uppercase; font-size: 0.74rem;
+  flex-shrink: 0; padding-top: 0.15rem;
+}
 
 /* Integrated Story block on product */
 .product-story { background: var(--paper-2); }
